@@ -24,3 +24,11 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+    def to_dict_json(self):
+        return {
+            'pk': self.pk,
+            'name': self.name,
+            'email': self.email,
+            'phone': self.phone,
+        }
