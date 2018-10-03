@@ -22,6 +22,7 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
+            <th>Gênero</th>
           </tr>
         </thead>
         <tbody>
@@ -30,6 +31,7 @@
               <td>{{ person.name }}</td>
               <td>{{ person.email }}</td>
               <td>{{ person.phone }}</td>
+              <td>{{ person.get_gender_display }}</td>
             </tr>
           {% endfor %}
         </tbody>
@@ -43,6 +45,7 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
+            <th>Gênero</th>
           </tr>
         </thead>
       </table>
@@ -66,7 +69,8 @@
       "columns": [
         {"data": "name"},
         {"data": "email"},
-        {"data": "phone"}
+        {"data": "phone"},
+        {"data": "gender"}
       ]
     });
   });

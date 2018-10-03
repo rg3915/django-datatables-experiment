@@ -31,4 +31,5 @@ class Person(models.Model):
             'name': self.name,
             'email': self.email,
             'phone': self.phone,
+            'gender': self.get_gender_display(),
         }
