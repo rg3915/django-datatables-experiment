@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -60,20 +61,6 @@
 
 {% block js %}
 
-<script>
-  $(document).ready( function () {
-    $('#myTable1').DataTable();
-
-    $('#myTable2').DataTable({
-      "ajax": "/person/json/",
-      "columns": [
-        {"data": "name"},
-        {"data": "email"},
-        {"data": "phone"},
-        {"data": "gender"}
-      ]
-    });
-  });
-</script>
+<script src="{% static 'js/data.js' %}"></script>
 
 {% endblock js %}
