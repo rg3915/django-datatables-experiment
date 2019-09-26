@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h2>Exemplo do uso de <a href="https://datatables.net/" target="_blank">DataTables</a></h2>
+    <p>Exemplo do uso de DataTables em <a href="https://datatables.net/examples/data_sources/server_side.html" target="_blank">Server-side render processing</a> com Django.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="cols">
+      <h2>DataTables Server-side render </h2>
+      <table id="myTable" class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Gênero</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+
+</div> <!-- /container -->
+
+{% endblock content %}
+
+{% block js %}
+
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable({
+      "processing": true,
+      "serverSide": true,
+      "ajax": "/person/json/",
+      "columns": [
+        {"data": "name"},
+        {"data": "email"},
+        {"data": "phone"},
+        {"data": "gender"}
+      ]
+    });
+  });
+
+</script>
+
+{% endblock js %}
