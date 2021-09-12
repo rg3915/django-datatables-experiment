@@ -7,4 +7,4 @@ from .models import Person
 class PersonAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'email', 'phone')
     search_fields = ('name', 'email')
-    list_filter = ('gender',)
+    list_filter = ('status',)

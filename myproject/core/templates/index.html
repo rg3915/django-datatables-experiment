@@ -23,7 +23,7 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
-            <th>Gênero</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
               <td>{{ person.name }}</td>
               <td>{{ person.email }}</td>
               <td>{{ person.phone }}</td>
-              <td>{{ person.get_gender_display }}</td>
+              <td>{{ person.get_status_display }}</td>
             </tr>
           {% endfor %}
         </tbody>
@@ -46,7 +46,7 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
-            <th>Gênero</th>
+            <th>Status</th>
           </tr>
         </thead>
       </table>

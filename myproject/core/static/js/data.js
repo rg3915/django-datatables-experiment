@@ -7,7 +7,7 @@ $(document).ready( function () {
       {"data": "name"},
       {"data": "email"},
       {"data": "phone"},
-      {"data": "gender"}
+      {"data": "status"}
     ]
   });
 });

@@ -8,9 +8,8 @@ from .models import Person
 
 
 def index(request):
-    context = {}
     person_list = Person.objects.all()
-    context['person_list'] = person_list
+    context = {'person_list': person_list}
     return render(request, 'index.html', context)
 
 
@@ -40,8 +39,6 @@ def person_json(request):
     data = [person.to_dict_json() for person in persons]
     response = {
         'data': data,
-        # 'page': page,  # [opcional]
-        # 'per_page': per_page,  # [opcional]
         'recordsTotal': total,
         'recordsFiltered': total,
     }
