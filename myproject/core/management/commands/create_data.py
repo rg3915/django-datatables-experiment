@@ -45,12 +45,10 @@ def create_person():
         name = f'{fake.first_name()} {fake.last_name()}'
         email = f'{slugify(name)}@email.com'
         phone = gen_phone()
-        status = gen_status()
         obj = Person(
             name=name,
             email=email,
             phone=phone,
-            status=status,
         )
         aux_list.append(obj)
 

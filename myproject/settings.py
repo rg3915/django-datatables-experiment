@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     # 3rd apps
     'django_extensions',
     # my apps
-    # 'myproject.core.apps.CoreConfig',
-    'myproject.core',
+    'myproject.core.apps.CoreConfig',
 ]
 
 MIDDLEWARE = [
