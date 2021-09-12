@@ -1,6 +1,9 @@
 import math
-from django.shortcuts import render
+
+from django.db.models import Q
 from django.http import JsonResponse
+from django.shortcuts import render
+
 from .models import Person
 
 
@@ -14,6 +17,15 @@ def index(request):
 def person_json(request):
     persons = Person.objects.all()
     total = persons.count()
+
+    search = request.GET.get('search[value]')
+
+    if search:
+        persons = persons.filter(
+            Q(name__icontains=search) |
+            Q(email__icontains=search) |
+            Q(phone__icontains=search)
+        )
 
     _start = request.GET.get('start')
     _length = request.GET.get('length')
