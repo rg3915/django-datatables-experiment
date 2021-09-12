@@ -2,4 +2,4 @@ dj-database-url==0.5.0
 Django==2.2.*
 django-extensions==2.2.1
 python-decouple==3.1
-django-seed==0.2.2
+Faker==8.12.1
