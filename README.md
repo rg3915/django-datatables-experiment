@@ -26,9 +26,8 @@ python manage.py migrate
 ## Reescrevendo o projeto a partir da base
 
 ```
-git clone https://github.com/rg3915/django-datatables-experiment.git
+git clone https://github.com/rg3915/django-datatables-experiment.git --branch base
 cd django-datatables-experiment
-git checkout base
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
